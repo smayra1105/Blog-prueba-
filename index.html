@@ -3,77 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog de Ciencia Ficción: [Nombre del Libro]</title>
+    <title>Mi Blog Personal - Dulce y Rosa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'pink-light': '#fce4ec',
+                        'pink-medium': '#f8bbd9',
+                        'pink-dark': '#e91e63',
+                    }
+                }
+            }
+        }
+    </script>
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(to bottom, #0a0a0a, #1a1a2e);
-            color: #e0e0e0;
-            margin: 0;
-            padding: 0;
-            min-height: 100vh;
-        }
-        header {
-            background: url('https://via.placeholder.com/1200x400/000000/ffffff?text=Espacio+Estelar') no-repeat center center;
-            background-size: cover;
-            text-align: center;
-            padding: 100px 20px;
-            color: #fff;
-        }
-        header h1 {
-            font-size: 3em;
-            margin: 0;
-            text-shadow: 2px 2px 4px #000;
-        }
-        header p {
-            font-size: 1.2em;
-            margin-top: 10px;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.8);
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
-        }
-        .post {
-            margin-bottom: 30px;
-            border-bottom: 1px solid #333;
-            padding-bottom: 20px;
-        }
-        .post h2 {
-            color: #00ffff;
-        }
-        .post p {
-            line-height: 1.6;
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #000;
-            color: #ccc;
+        .glow:hover {
+            box-shadow: 0 0 20px rgba(233, 30, 99, 0.5);
+            transition: box-shadow 0.3s ease;
         }
     </style>
 </head>
-<body>
-    <header>
-        <h1>Blog de Ciencia Ficción</h1>
-        <p>Explorando las profundidades de [Nombre del Libro] y más en el universo de la sci-fi</p>
-    </header>
-    <div class="container">
-        <div class="post">
-            <h2>Introducción a [Nombre del Libro]</h2>
-            <p>En este blog, hablaremos de [Nombre del Libro], una obra maestra de ciencia ficción que nos transporta a mundos lejanos. Aquí compartiré reseñas, análisis y reflexiones sobre sus temas, personajes y trama. ¡Bienvenidos a la aventura!</p>
+<body class="bg-pink-light font-sans">
+    <!-- Barra de Navegación -->
+    <nav class="bg-pink-medium shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <h1 class="text-pink-dark text-2xl font-bold">🌸 Mi Blog Dulce</h1>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="#" class="text-pink-dark hover:text-white px-3 py-2 rounded-md text-sm font-medium">Inicio</a>
+                    <a href="#" class="text-pink-dark hover:text-white px-3 py-2 rounded-md text-sm font-medium">Sobre Mí</a>
+                    <a href="#" class="text-pink-dark hover:text-white px-3 py-2 rounded-md text-sm font-medium">Posts</a>
+                    <a href="#" class="text-pink-dark hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contacto</a>
+                </div>
+            </div>
         </div>
-        <div class="post">
-            <h2>Primer Post: Reseña Inicial</h2>
-            <p>[Nombre del Libro] es un libro que combina elementos de aventura, filosofía y especulación científica. Escrito por [Autor], nos invita a cuestionar la realidad y el futuro de la humanidad. ¿Qué opinas tú? ¡Deja un comentario!</p>
+    </nav>
+
+    <!-- Sección Hero -->
+    <section class="relative bg-gradient-to-r from-pink-light to-pink-medium py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl sm:text-5xl font-bold text-pink-dark mb-4">Bienvenidas a Mi Mundo Rosa</h2>
+            <p class="text-lg sm:text-xl text-gray-700 mb-8">Historias dulces, consejos lindos y un toque de magia en cada post.</p>
+            <img src="https://via.placeholder.com/800x400/ffebee/000?text=Imagen+Hero+Dulce" alt="Imagen Hero" class="w-full max-w-4xl mx-auto rounded-lg shadow-lg">
         </div>
-        <!-- Agrega más posts aquí -->
-    </div>
-    <footer>
-        <p>&copy; 2023 Tu Blog de Sci-Fi. Todos los derechos reservados.</p>
+    </section>
+
+    <!-- Sección de Posts -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="text-3xl font-bold text-pink-dark text-center mb-12">Mis Últimos Posts</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Tarjeta 1 -->
+                <div class="bg-pink-light rounded-lg shadow-md p-6 glow cursor-pointer">
+                    <img src="https://via.placeholder.com/300x200/fce4ec/000?text=Post+1" alt="Post 1" class="w-full h-48 object-cover rounded-md mb-4">
+                    <h4 class="text-xl font-semibold text-pink-dark mb-2">Título del Post 1</h4>
+                    <p class="text-gray-600">Una breve descripción dulce y encantadora de este post. ¡Haz clic para leer más!</p>
+                </div>
+                <!-- Tarjeta 2 -->
+                <div class="bg-pink-light rounded-lg shadow-md p-6 glow cursor-pointer">
+                    <img src="https://via.placeholder.com/300x200/fce4ec/000?text=Post+2" alt="Post 2" class="w-full h-48 object-cover rounded-md mb-4">
+                    <h4 class="text-xl font-semibold text-pink-dark mb-2">Título del Post 2</h4>
+                    <p class="text-gray-600">Otra historia mágica que te hará sonreír. ¡No te la pierdas!</p>
+                </div>
+                <!-- Tarjeta 3 -->
+                <div class="bg-pink-light rounded-lg shadow-md p-6 glow cursor-pointer">
+                    <img src="https://via.placeholder.com/300x200/fce4ec/000?text=Post+3" alt="Post 3" class="w-full h-48 object-cover rounded-md mb-4">
+                    <h4 class="text-xl font-semibold text-pink-dark mb-2">Título del Post 3</h4>
+                    <p class="text-gray-600">Consejos rosados para tu día a día. ¡Inspírate aquí!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-pink-medium py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-pink-dark">&copy; 2023 Mi Blog Dulce. Hecho con 💖 y Tailwind CSS.</p>
+        </div>
     </footer>
 </body>
 </html>
